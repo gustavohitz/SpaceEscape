@@ -6,6 +6,8 @@ public class FollowPlayer : MonoBehaviour {
 
     [SerializeField]
     private Transform _target;
+    [SerializeField]
+    private float _speed;
 
     private void Update() {
         EnemyFollowsPlayer();
@@ -14,7 +16,12 @@ public class FollowPlayer : MonoBehaviour {
     private void EnemyFollowsPlayer() {
         var moving = _target.position - transform.position;
         moving = moving.normalized;
+        moving *= _speed;
         transform.position += moving * Time.deltaTime;
+    }
+
+    public void SetTarget(Transform newTarget) {
+        _target = newTarget;
     }
    
 }
