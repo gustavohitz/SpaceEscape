@@ -7,17 +7,22 @@ public class FollowPlayer : MonoBehaviour {
     [SerializeField]
     private Transform _target;
     [SerializeField]
-    private float _speed;
+    private float _force;
+    private Rigidbody2D _rb2d;
 
-    private void Update() {
+    private void Awake() {
+        _rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    private void FixedUpdate() {
         EnemyFollowsPlayer();
     }
 
     private void EnemyFollowsPlayer() {
         var moving = _target.position - transform.position;
         moving = moving.normalized;
-        moving *= _speed;
-        transform.position += moving * Time.deltaTime;
+        moving *= _force;
+        _rb2d.AddForce(moving, ForceMode2D.Force);
     }
 
     public void SetTarget(Transform newTarget) {
