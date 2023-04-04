@@ -11,6 +11,8 @@ public class Gerador : MonoBehaviour
     private float raio;
     [SerializeField]
     private Transform _target;
+    [SerializeField]
+    private ScoreUI _score;
 
     private void Start() {
         InvokeRepeating("Instanciar", 1f, tempo);
@@ -21,6 +23,7 @@ public class Gerador : MonoBehaviour
         var inimigo = GameObject.Instantiate(this.prefabInimigo);
         this.DefinirPosicaoInimigo(inimigo);
         inimigo.GetComponent<FollowPlayer>().SetTarget(_target);
+        inimigo.GetComponent<ScoreManager>().SetScore(_score);
     }
 
     private void DefinirPosicaoInimigo(GameObject inimigo) {
