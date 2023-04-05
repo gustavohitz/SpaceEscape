@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 82167981}
   - component: {fileID: 82167983}
   - component: {fileID: 82167982}
+  - component: {fileID: 82167984}
   m_Layer: 5
   m_Name: Pontos
   m_TagString: Untagged
@@ -328,6 +329,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82167980}
   m_CullTransparentMesh: 1
+--- !u!114 &82167984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82167980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263c8647b568244969d14cbbaa85f39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &285902255
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -797,6 +811,7 @@ GameObject:
   - component: {fileID: 1016959372}
   - component: {fileID: 1016959376}
   - component: {fileID: 1016959375}
+  - component: {fileID: 1016959377}
   m_Layer: 5
   m_Name: PanelNovaEntrada
   m_TagString: Untagged
@@ -865,6 +880,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016959371}
   m_CullTransparentMesh: 1
+--- !u!114 &1016959377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016959371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ed987d67b37470dad6eb6d4d785bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _newScoreTxt: {fileID: 82167984}
 --- !u!1 &1699952959
 GameObject:
   m_ObjectHideFlags: 0

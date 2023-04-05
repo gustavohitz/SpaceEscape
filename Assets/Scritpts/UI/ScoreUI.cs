@@ -5,6 +5,12 @@ using UnityEngine.Events;
 
 public class ScoreUI : MonoBehaviour {
 
+    public int score {
+        get {
+            return _score;
+        }
+    }
+
     private int _score;
     [SerializeField]
     private MyEventInt OnScoring;

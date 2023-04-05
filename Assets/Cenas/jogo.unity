@@ -201,7 +201,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 758827234}
   - {fileID: 1730725134}
   m_Father: {fileID: 1465969429}
   m_RootOrder: 0
@@ -457,6 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758827234}
   - component: {fileID: 758827233}
+  - component: {fileID: 758827235}
   m_Layer: 0
   m_Name: ScoreUI
   m_TagString: Untagged
@@ -498,14 +498,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758827232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 272865011}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758827235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758827232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c56182e29a1435991f21eb5940c36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &812242547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,7 +1648,7 @@ RectTransform:
   - {fileID: 679329953}
   - {fileID: 1344085549}
   m_Father: {fileID: 272865011}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1694,6 +1706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pausePanel: {fileID: 1344085548}
+  _timeScaleDuringPause: 0.047
 --- !u!4 &1880600036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19,
