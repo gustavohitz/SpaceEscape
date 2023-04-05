@@ -5,19 +5,14 @@ using UnityEngine.Events;
 
 public class ScoreUI : MonoBehaviour {
 
-    public int score {
-        get {
-            return _score;
-        }
-    }
+    public int score { get; private set; }
 
-    private int _score;
     [SerializeField]
     private MyEventInt OnScoring;
 
     public void AddOnePointToScore() {
-        _score++;
-        OnScoring.Invoke(_score);
+        score++;
+        OnScoring.Invoke(score);
     }
     
 }

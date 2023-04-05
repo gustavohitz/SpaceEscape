@@ -7,6 +7,9 @@ public class NewScoreManager : MonoBehaviour {
     [SerializeField]
     private UpdateScoreUI _newScoreTxt;
     private ScoreUI _score;
+    [SerializeField]
+    private RankingManager _ranking;
+
 
     private void Start() {
         _score = GameObject.FindObjectOfType<ScoreUI>();
@@ -17,6 +20,7 @@ public class NewScoreManager : MonoBehaviour {
         }
 
         _newScoreTxt.UpdateScoreTxt(totalPoints);
+        _ranking.AddScore(totalPoints);
     }
     
 }
