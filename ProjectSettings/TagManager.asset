@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trilha
   - "Pontua\xE7\xE3o"
+  - Score
   layers:
   - Default
   - TransparentFX
