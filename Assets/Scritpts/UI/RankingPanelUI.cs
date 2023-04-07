@@ -10,15 +10,15 @@ public class RankingPanelUI : MonoBehaviour {
     private GameObject _hiScorePanelPrefab;
 
     private void Start() {
-        var scoreList = _ranking.GetPoints();
+        var rankingList = _ranking.GetRankingItems();
 
-        for(var i = 1; i < scoreList.Count; i++) {
+        for(var i = 1; i < rankingList.Count; i++) {
             if(i >= 6) {
                 break;
             }
 
             var rankedPlayer = GameObject.Instantiate(_hiScorePanelPrefab, this.transform);
-            rankedPlayer.GetComponent<RankingElementsUI>().SetElements(i, "Piruca", scoreList[i]);
+            rankedPlayer.GetComponent<RankingElementsUI>().SetElements(i, rankingList[i].name, rankingList[i].points);
         }
     }
    

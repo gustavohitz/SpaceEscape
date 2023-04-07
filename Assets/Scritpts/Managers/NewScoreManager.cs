@@ -9,6 +9,7 @@ public class NewScoreManager : MonoBehaviour {
     private ScoreUI _score;
     [SerializeField]
     private RankingManager _ranking;
+    private int _id;
 
 
     private void Start() {
@@ -20,7 +21,11 @@ public class NewScoreManager : MonoBehaviour {
         }
 
         _newScoreTxt.UpdateScoreTxt(totalPoints);
-        _ranking.AddScore(totalPoints);
+        _id = _ranking.AddScore(totalPoints, "Name");
+    }
+
+    public void ChangeName(string name) {
+        _ranking.ChangeName(name, _id);
     }
     
 }

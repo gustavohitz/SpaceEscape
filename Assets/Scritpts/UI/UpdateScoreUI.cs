@@ -14,5 +14,8 @@ public class UpdateScoreUI : MonoBehaviour {
     public void UpdateScoreTxt(int number) {
         _scoreTxt.text = number.ToString();
     }
+    public void UpdateScoreTxt(string newText) {
+        _scoreTxt.text = newText;
+    }
  
 }
