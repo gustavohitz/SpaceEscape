@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Collections.ObjectModel;
+using System;
 
 public class RankingManager : MonoBehaviour {
 
@@ -25,10 +26,11 @@ public class RankingManager : MonoBehaviour {
     }
 
     public int AddScore(int points, string name) {
-        var id = _rankingList.Count * Random.Range(1, 100000);
+        var id = _rankingList.Count * UnityEngine.Random.Range(1, 100000);
 
         var newPlayerElements = new RankingItems(name, points, id);
         _rankingList.Add(newPlayerElements);
+        _rankingList.Sort();
         SaveRanking();
 
         return id;
@@ -60,7 +62,7 @@ public class RankingManager : MonoBehaviour {
 }
 
 [System.Serializable]
-public class RankingItems {
+public class RankingItems : IComparable {
     public string name;
     public int points;
     public int id;
@@ -69,5 +71,9 @@ public class RankingItems {
         this.name = name;
         this.points = points;
         this.id = id;
+    }
+    public int CompareTo(object obj) {
+        var otherObject = obj as RankingItems;
+        return otherObject.points.CompareTo(this.points);
     }
 }
