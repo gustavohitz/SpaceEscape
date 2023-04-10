@@ -25,8 +25,8 @@ public class RankingManager : MonoBehaviour {
         //Debug.Log(Application.persistentDataPath);
     }
 
-    public int AddScore(int points, string name) {
-        var id = _rankingList.Count * UnityEngine.Random.Range(1, 100000);
+    public string AddScore(int points, string name) {
+        var id = Guid.NewGuid().ToString();
 
         var newPlayerElements = new RankingItems(name, points, id);
         _rankingList.Add(newPlayerElements);
@@ -36,7 +36,7 @@ public class RankingManager : MonoBehaviour {
         return id;
     }
 
-    public void ChangeName(string newName, int id) {
+    public void ChangeName(string newName, string id) {
         foreach(var item in _rankingList) {
             if(item.id == id) {
                 item.name = newName;
@@ -65,9 +65,9 @@ public class RankingManager : MonoBehaviour {
 public class RankingItems : IComparable {
     public string name;
     public int points;
-    public int id;
+    public string id;
 
-    public RankingItems(string name, int points, int id) {
+    public RankingItems(string name, int points, string id) {
         this.name = name;
         this.points = points;
         this.id = id;

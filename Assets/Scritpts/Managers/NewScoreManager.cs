@@ -9,7 +9,7 @@ public class NewScoreManager : MonoBehaviour {
     private ScoreUI _score;
     [SerializeField]
     private RankingManager _ranking;
-    private int _id;
+    private string _id;
 
 
     private void Start() {
