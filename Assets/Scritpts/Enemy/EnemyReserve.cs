@@ -14,6 +14,7 @@ public class EnemyReserve : MonoBehaviour {
 
     private void Start() {
         _enemyReserve = new Stack<GameObject>();
+        CreateAllEnemies();
     }
 
     private void CreateAllEnemies() {
@@ -22,6 +23,14 @@ public class EnemyReserve : MonoBehaviour {
             enemy.SetActive(false);
             _enemyReserve.Push(enemy);
         }
+    }
+
+    public GameObject GetEnemy() {
+        return _enemyReserve.Pop();
+    }
+
+    public bool AreThereEnemiesInTheReserve() {
+        return _enemyReserve.Count > 0;
     }
     
 }
