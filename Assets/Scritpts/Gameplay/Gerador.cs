@@ -24,7 +24,6 @@ public class Gerador : MonoBehaviour
     private void Instanciar() {
         if(_enemyReserve.AreThereEnemiesInTheReserve()) {
             var inimigo = _enemyReserve.GetEnemy();
-            inimigo.SetActive(true);
             this.DefinirPosicaoInimigo(inimigo);
             inimigo.GetComponent<FollowPlayer>().SetTarget(_target);
             inimigo.GetComponent<ScoreManager>().SetScore(_score);

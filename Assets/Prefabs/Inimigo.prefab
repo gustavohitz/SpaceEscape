@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 114961902889299820}
   - component: {fileID: -236487567049269154}
   - component: {fileID: 5608811844104900253}
+  - component: {fileID: 6533180601975435059}
   m_Layer: 8
   m_Name: Inimigo
   m_TagString: Untagged
@@ -151,9 +152,9 @@ MonoBehaviour:
   aoBater:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114961902889299820}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 5608811844104900253}
+        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
+        m_MethodName: ComputeScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -163,9 +164,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5608811844104900253}
-        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
-        m_MethodName: ComputeScore
+      - m_Target: {fileID: 6533180601975435059}
+        m_TargetAssemblyTypeName: EnemyReserveManager, Assembly-CSharp
+        m_MethodName: PutEnemyBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -199,5 +200,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4c0441c4505431491b51724188e72d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6533180601975435059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134229065056836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79573e3753ea9456c8873f5494a2f575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

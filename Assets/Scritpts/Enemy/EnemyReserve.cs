@@ -20,13 +20,22 @@ public class EnemyReserve : MonoBehaviour {
     private void CreateAllEnemies() {
         for(var i = 0; i < _amountOfEnemiesCreated; i++) {
             var enemy = GameObject.Instantiate(_enemyPrefab, this.transform);
+            var reserveEnemy = enemy.GetComponent<EnemyReserveManager>();
+            reserveEnemy.SetReserve(this);
             enemy.SetActive(false);
             _enemyReserve.Push(enemy);
         }
     }
 
     public GameObject GetEnemy() {
-        return _enemyReserve.Pop();
+        var enemy = _enemyReserve.Pop();
+        enemy.SetActive(true);
+        return enemy;
+    }
+
+    public void PutEnemyBackInTheReserve(GameObject enemy) {
+        enemy.SetActive(false);
+        _enemyReserve.Push(enemy);
     }
 
     public bool AreThereEnemiesInTheReserve() {
