@@ -214,7 +214,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_Name
-      value: Barreira Fixa (1)
+      value: Moving Barrier 1
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_RootOrder
@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088bf6c34b6c4f968f632e526a3192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _overrideExistent: 1
 --- !u!1 &812242547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1483,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_Name
-      value: Barreira Fixa (2)
+      value: Moving Barrier
       objectReference: {fileID: 0}
     - target: {fileID: 4631253430628302, guid: 6fbcc97c6e3854a4bbe5058eacc39e19, type: 3}
       propertyPath: m_RootOrder
@@ -1635,6 +1636,32 @@ MonoBehaviour:
   _enemyPrefab: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11,
     type: 3}
   _amountOfEnemiesCreated: 10
+--- !u!1 &1648941827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19,
+    type: 3}
+  m_PrefabInstance: {fileID: 1634699634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1648941828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648941827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca9986a200cd47aea0cbb3b73e4d667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _amplitude: 3
+  _speed: 2
+--- !u!1 &1686425955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1288704199317362, guid: 6fbcc97c6e3854a4bbe5058eacc39e19,
+    type: 3}
+  m_PrefabInstance: {fileID: 457752700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730725130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1770,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 457752700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1745745776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686425955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca9986a200cd47aea0cbb3b73e4d667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _amplitude: 2
+  _speed: 3
 --- !u!1 &1858454886
 GameObject:
   m_ObjectHideFlags: 0

@@ -160,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0016556, y: 98.40039}
-  m_SizeDelta: {x: 784.57, y: 196.8}
+  m_AnchoredPosition: {x: 0.00075102, y: 98.40039}
+  m_SizeDelta: {x: 759.58, y: 196.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55671130
 MonoBehaviour:
@@ -189,7 +189,7 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 133
+    m_MaxSize: 97
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1074,6 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _newScoreTxt: {fileID: 82167984}
+  _newNameTxt: {fileID: 55671132}
   _ranking: {fileID: 2133763066}
 --- !u!1 &1077851854
 GameObject:
@@ -1154,7 +1155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Insert your name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
