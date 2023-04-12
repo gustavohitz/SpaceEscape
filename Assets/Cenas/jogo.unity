@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563932336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.95, y: -0.62, z: 0}
+  m_LocalPosition: {x: -12.72, y: -4.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -303,7 +303,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempo: 1
-  raio: 3
+  _generateArea:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 3
+    height: 9.75
   _target: {fileID: 2092840851}
   _score: {fileID: 758827233}
   _enemyReserve: {fileID: 1648661213}
@@ -937,7 +942,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempo: 1
-  raio: 3
+  _generateArea:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 17.45
+    height: 3
   _target: {fileID: 2092840851}
   _score: {fileID: 758827233}
   _enemyReserve: {fileID: 1648661213}
@@ -949,7 +959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028723153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26, y: 8, z: 0}
+  m_LocalPosition: {x: -9.09, y: 5.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1802,7 +1812,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempo: 1
-  raio: 3
+  _generateArea:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 3
+    height: 9.75
   _target: {fileID: 2092840851}
   _score: {fileID: 758827233}
   _enemyReserve: {fileID: 1648661213}
@@ -1814,7 +1829,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882994926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.72, y: -0.19, z: 0}
+  m_LocalPosition: {x: 8.9, y: -4.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

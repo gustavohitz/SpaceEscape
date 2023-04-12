@@ -7,7 +7,7 @@ public class Gerador : MonoBehaviour
     [SerializeField]
     private float tempo;
     [SerializeField]
-    private float raio;
+    private Rect _generateArea;
     [SerializeField]
     private Transform _target;
     [SerializeField]
@@ -31,11 +31,14 @@ public class Gerador : MonoBehaviour
     }
 
     private void DefinirPosicaoInimigo(GameObject inimigo) {
-        var posicaoAleatoria = new Vector3(Random.Range(-this.raio, this.raio),
-                        Random.Range(-this.raio, this.raio),
-                        0);
-
-        var posicaoInimigo = this.transform.position + posicaoAleatoria;
+        var posicaoAleatoria = new Vector2(Random.Range(_generateArea.x, _generateArea.x + _generateArea.width), Random.Range(_generateArea.y, _generateArea.y + _generateArea.height));
+        var posicaoInimigo = (Vector2)this.transform.position + posicaoAleatoria;
         inimigo.transform.position = posicaoInimigo;
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = new Color(100, 0, 199);
+        var position = _generateArea.position + (Vector2)transform.position + _generateArea.size/2;
+        Gizmos.DrawWireCube(position, _generateArea.size);
     }
 }
